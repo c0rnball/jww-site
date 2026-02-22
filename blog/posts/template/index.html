@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Joy With Wealth</title>
+    <meta name="description" content="Read insights on financial planning, wealth management, and building a secure future from Joy With Wealth.">
+    <link rel="canonical" href="https://joywithwealth.com/blog/">
+
+    <meta property="og:title" content="Blog - Joy With Wealth">
+    <meta property="og:description" content="Insights on financial planning, wealth management, and building a secure future.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Joy With Wealth">
+
+    <!-- Tailwind CSS -->
+    <script src="/assets/js/tailwind.js"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #EFEFEF; }
+        ::-webkit-scrollbar-thumb { background: #90B9D5; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #548DB3; }
+    </style>
+</head>
+<body class="bg-off-white text-tar-blue font-sans selection:bg-honey-bronze selection:text-pitch-black">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-pure-white/95 backdrop-blur-sm shadow-sm border-b border-powder-blue/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 flex-shrink-0">
+                        <img src="/assets/images/logonew.svg" alt="Joy With Wealth logo" width="64" height="64">
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="/" class="font-serif text-2xl font-bold text-tar-blue tracking-tight">Joy With Wealth</a>
+                        <span class="text-xs font-medium text-dark-goldenrod tracking-wide uppercase">Invest - Grow - Generate</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/" class="text-charcoal-blue hover:text-dark-goldenrod font-medium transition-colors duration-200">Home</a>
+                    <a href="/explore/" class="text-charcoal-blue hover:text-dark-goldenrod font-medium transition-colors duration-200">Explore</a>
+                    <a href="/blog/" class="text-dark-goldenrod font-medium transition-colors duration-200">Blog</a>
+                    <a href="/#contact" class="px-5 py-2.5 bg-tar-blue text-pure-white rounded-full font-medium hover:bg-charcoal-blue transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200">Contact Us</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-tar-blue hover:text-dark-goldenrod focus:outline-none" aria-label="Toggle menu">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-pure-white border-t border-powder-blue/20">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-inner">
+                <a href="/" class="block px-3 py-3 text-base font-medium text-tar-blue hover:bg-off-white hover:text-dark-goldenrod rounded-md">Home</a>
+                <a href="/explore/" class="block px-3 py-3 text-base font-medium text-tar-blue hover:bg-off-white hover:text-dark-goldenrod rounded-md">Explore</a>
+                <a href="/blog/" class="block px-3 py-3 text-base font-medium text-dark-goldenrod hover:bg-off-white rounded-md">Blog</a>
+                <a href="/#contact" class="block px-3 py-3 text-base font-medium text-tar-blue hover:bg-off-white hover:text-dark-goldenrod rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Content -->
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Loading State -->
+        <div id="post-loading" class="text-center py-20">
+            <div class="inline-block w-8 h-8 border-4 border-powder-blue border-t-dark-goldenrod rounded-full animate-spin"></div>
+            <p class="mt-4 text-charcoal-blue">Loading article...</p>
+        </div>
+
+        <!-- Post Header (populated by JS) -->
+        <header id="post-header" class="hidden mb-10">
+            <a href="/blog/" class="inline-flex items-center gap-1 text-sm text-air-force-blue hover:text-dark-goldenrod transition-colors mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                Back to Blog
+            </a>
+            <h1 id="post-title" class="text-3xl md:text-4xl font-serif font-bold text-pitch-black mb-4"></h1>
+            <div id="post-meta" class="flex flex-wrap items-center gap-4 text-sm text-charcoal-blue mb-6"></div>
+            <div id="post-tags" class="flex flex-wrap gap-2 mb-8"></div>
+            <div id="post-cover" class="mb-8"></div>
+        </header>
+
+        <!-- Table of Contents -->
+        <nav id="table-of-contents" class="hidden mb-10 p-6 bg-pure-white rounded-2xl border border-powder-blue/30">
+            <h2 class="text-lg font-bold text-pitch-black mb-3">Table of Contents</h2>
+            <ul id="toc-list" class="space-y-2 text-sm"></ul>
+        </nav>
+
+        <!-- Rendered Markdown -->
+        <div id="post-content" class="hidden"></div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-pitch-black py-10 border-t border-charcoal-blue">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <div class="flex items-center gap-3">
+                        <img src="/assets/images/logonew.svg" alt="Joy With Wealth" class="w-10 h-10">
+                        <span class="font-serif text-lg font-bold text-off-white">Joy With Wealth</span>
+                    </div>
+                    <span class="text-xs text-dark-goldenrod uppercase tracking-widest">Invest - Grow - Generate</span>
+                </div>
+                <div class="flex flex-wrap gap-6 text-sm">
+                    <a href="/policies/" class="text-powder-blue hover:text-light-gold transition-colors">Policies & Disclaimers</a>
+                    <a href="/blog/" class="text-powder-blue hover:text-light-gold transition-colors">Blog</a>
+                    <a href="mailto:contact@joywithwealth.com" class="text-powder-blue hover:text-light-gold transition-colors">contact@joywithwealth.com</a>
+                </div>
+                <p class="text-charcoal-blue text-sm">&copy; 2026 Joy With Wealth. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+    <!-- DOMPurify for XSS prevention -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+
+    <script src="/assets/js/blog-post.js"></script>
+    <script src="/assets/js/common.js"></script>
+</body>
+</html>

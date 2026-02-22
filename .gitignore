@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+*.log
+.DS_Store
+.claude/
+ai-analysis/
+implementation-plan.md
+CURRENT_STATE.md
+CONTINUE_FROM_HERE.md
+jww.html
+logonew.svg
