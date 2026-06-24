@@ -16,10 +16,8 @@
     <script src="/assets/js/tailwind.js"></script>
     <script src="/assets/js/tailwind-config.js"></script>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Fonts (self-hosted) -->
+    <link rel="stylesheet" href="/assets/css/fonts.css">
 
     <style>
         html { scroll-behavior: smooth; }
@@ -102,30 +100,19 @@
     </article>
 
     <!-- Footer -->
-    <footer class="bg-pitch-black py-10 border-t border-charcoal-blue">
+    <footer class="bg-pitch-black py-5 border-t border-charcoal-blue">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex flex-col items-center md:items-start gap-2">
-                    <div class="flex items-center gap-3">
-                        <img src="/assets/images/logonew.svg" alt="Joy With Wealth" class="w-10 h-10">
-                        <span class="font-serif text-lg font-bold text-off-white">Joy With Wealth</span>
-                    </div>
-                    <span class="text-xs text-dark-goldenrod uppercase tracking-widest">Invest - Grow - Generate</span>
-                </div>
-                <div class="flex flex-wrap gap-6 text-sm">
-                    <a href="/policies/" class="text-powder-blue hover:text-light-gold transition-colors">Policies & Disclaimers</a>
-                    <a href="/blog/" class="text-powder-blue hover:text-light-gold transition-colors">Blog</a>
-                    <a href="mailto:contact@joywithwealth.com" class="text-powder-blue hover:text-light-gold transition-colors">contact@joywithwealth.com</a>
-                </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                <a href="/policies/" class="text-sm text-powder-blue hover:text-light-gold transition-colors">Policies, Disclaimers &amp; FAQ</a>
                 <p class="text-charcoal-blue text-sm">&copy; 2026 Joy With Wealth. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- marked.js for markdown rendering -->
-    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+    <script src="/assets/js/marked.min.js"></script>
     <!-- DOMPurify for XSS prevention -->
-    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+    <script src="/assets/js/purify.min.js"></script>
 
     <script src="/assets/js/blog-post.js"></script>
     <script src="/assets/js/common.js"></script>
