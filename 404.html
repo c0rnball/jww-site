@@ -39,9 +39,7 @@
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-tar-blue hover:text-dark-goldenrod focus:outline-none" aria-label="Toggle menu">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
+                        <i data-lucide="menu" class="h-8 w-8"></i>
                     </button>
                 </div>
             </div>
@@ -66,13 +64,27 @@
     <!-- Footer -->
     <footer class="bg-pitch-black py-5 border-t border-charcoal-blue">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <a href="/policies/" class="text-sm text-powder-blue hover:text-light-gold transition-colors">Policies, Disclaimers &amp; FAQ</a>
+                <div class="flex items-center gap-5">
+                    <!-- TODO: replace href with the Facebook page URL for "Daljeet Singh Rupaal" -->
+                    <a href="#" aria-label="Facebook" class="text-powder-blue hover:text-light-gold transition-colors">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/daljeet-rupaal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-powder-blue hover:text-light-gold transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.instagram.com/daljeetrupaal" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-powder-blue hover:text-light-gold transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                </div>
                 <p class="text-charcoal-blue text-sm">&copy; 2026 Joy With Wealth. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="/assets/js/lucide.min.js"></script>
+    <script src="/assets/js/brand-icons.js"></script>
     <script src="/assets/js/common.js"></script>
 </body>
 </html>

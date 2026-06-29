@@ -15,6 +15,10 @@ UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Ge
 GOOGLE_FONTS_URL="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
 MARKED_URL="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"
 DOMPURIFY_URL="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"
+# Lucide (icons), tracking latest. v1+ dropped the brand/social logos
+# (Facebook, Instagram, LinkedIn); those three are supplied locally by the
+# hand-authored assets/js/brand-icons.js (not fetched here).
+LUCIDE_URL="https://cdn.jsdelivr.net/npm/lucide@1.22.0/dist/umd/lucide.min.js"
 
 # Only these subsets are kept (English + Western/European). Drop the rest.
 KEEP_SUBSETS="latin latin-ext"
@@ -73,9 +77,12 @@ echo "==> JS: marked.min.js"
 curl -fsSL -A "$UA" "$MARKED_URL" -o "$JS_DIR/marked.min.js"
 echo "==> JS: purify.min.js (DOMPurify)"
 curl -fsSL -A "$UA" "$DOMPURIFY_URL" -o "$JS_DIR/purify.min.js"
+echo "==> JS: lucide.min.js (icons)"
+curl -fsSL -A "$UA" "$LUCIDE_URL" -o "$JS_DIR/lucide.min.js"
 
 echo "==> Done. Vendored assets:"
 ls -1 "$FONTS_DIR"
 echo "    assets/css/fonts.css"
 echo "    assets/js/marked.min.js"
 echo "    assets/js/purify.min.js"
+echo "    assets/js/lucide.min.js"

@@ -6,6 +6,15 @@
 (function () {
   'use strict';
 
+  // --- Render Lucide icons (static markup) ---
+  // Dynamically injected icons (blog list/post) call lucide.createIcons()
+  // again themselves after they update the DOM.
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    }
+  });
+
   // --- Mobile Menu Toggle ---
   document.addEventListener('DOMContentLoaded', function () {
     var btn = document.getElementById('mobile-menu-btn');

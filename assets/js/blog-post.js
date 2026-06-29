@@ -153,13 +153,12 @@
     if (loadingEl) {
       loadingEl.innerHTML =
         '<div class="text-center py-20">' +
-          '<svg class="w-16 h-16 text-powder-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
-            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>' +
-          '</svg>' +
+          '<i data-lucide="circle-alert" class="w-16 h-16 text-powder-blue mx-auto mb-4"></i>' +
           '<h2 class="text-2xl font-serif font-bold text-pitch-black mb-2">Post Not Found</h2>' +
           '<p class="text-charcoal-blue mb-6">The article you are looking for could not be loaded.</p>' +
           '<a href="/blog/" class="px-6 py-3 bg-dark-goldenrod text-pure-white rounded-full font-medium hover:bg-honey-bronze transition-colors shadow-lg">Back to Blog</a>' +
         '</div>';
+      if (window.lucide) window.lucide.createIcons();
     }
   }
 

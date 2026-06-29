@@ -50,9 +50,7 @@
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-tar-blue hover:text-dark-goldenrod focus:outline-none" aria-label="Toggle menu">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
+                        <i data-lucide="menu" class="h-8 w-8"></i>
                     </button>
                 </div>
             </div>
@@ -79,7 +77,7 @@
     <div class="bg-light-gold/20 border-b border-honey-bronze/30">
         <div class="max-w-4xl mx-auto px-4 py-3 text-center">
             <p class="text-dark-goldenrod font-medium text-sm">
-                <svg class="w-4 h-4 inline-block mr-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg>
+                <i data-lucide="triangle-alert" class="w-4 h-4 inline-block mr-1 -mt-0.5"></i>
                 These policies are a working draft and should be reviewed by a qualified legal professional before being relied upon as legal advice.
             </p>
         </div>
@@ -122,8 +120,8 @@
                     <ul class="list-disc list-inside space-y-2 ml-4">
                         <li><strong>Personal identification information:</strong> Name, email address, phone number, and other details you voluntarily provide when you book a consultation or contact us.</li>
                         <li><strong>Financial information you choose to share:</strong> Details about your income, expenses, goals, and circumstances that you provide during a consultation or program, so that we can guide you. You share this voluntarily.</li>
-                        <li><strong>Payment information:</strong> If you enrol in a paid program, your payment is processed by our payment provider (Razorpay). Your card or banking details are collected and processed by them &mdash; we do not store your card details on our servers.</li>
-                        <li><strong>Scheduling data:</strong> When you book a consultation, your name, email, and selected time slot may be collected by our scheduling provider (Calendly) and shared with us.</li>
+                        <li><strong>Payment information:</strong> If you enrol in a paid program, your payment is processed by Razorpay Payment Gateway, a Govt of India approved payment service. Your card or banking details are collected and processed by them &mdash; we do not store your card details on our servers.</li>
+                        <li><strong>Scheduling data:</strong> When you book a consultation, your name, email, and selected time slot may be collected by Calendly.com, our scheduling provider, and shared with us and Zoom.com.</li>
                         <li><strong>Usage data:</strong> Information about how you use our website, such as pages visited and referral sources, collected via analytics tools only after you consent (see Cookies below).</li>
                     </ul>
                 </section>
@@ -135,6 +133,7 @@
                     <ul class="list-disc list-inside space-y-2 ml-4">
                         <li><strong>Razorpay</strong> &mdash; Payment processing for paid programs. Your payment data is handled securely in accordance with PCI-DSS standards.</li>
                         <li><strong>Calendly</strong> &mdash; Appointment scheduling for your free consultation. Collects your name, email, and scheduling preferences.</li>
+                        <li><strong>Zoom</strong> &mdash; Video conferencing for consultations and sessions. May collect your name, email, and meeting participation details.</li>
                         <li><strong>Brevo</strong> &mdash; Email communications. Your email address and name may be stored for the purpose of sending you updates and resources.</li>
                         <li><strong>Google Analytics</strong> &mdash; Website analytics (loaded only after consent). Collects anonymised usage data.</li>
                         <li><strong>Meta (Facebook) Pixel</strong> &mdash; Advertising analytics (loaded only after consent). Helps us measure and optimise our ads.</li>
@@ -185,7 +184,7 @@
                     <h3 class="text-xl font-serif font-bold text-pitch-black mb-3">1.7 Contact for Privacy Concerns</h3>
                     <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
                     <p class="mt-2"><strong>Email:</strong> <a href="mailto:contact@joywithwealth.com" class="text-dark-goldenrod hover:text-honey-bronze font-medium transition-colors">contact@joywithwealth.com</a></p>
-                    <p><strong>Address:</strong> [City, State], India</p>
+                    <p><strong>Address:</strong> Punjab, India.</p>
                 </section>
 
             </div>
@@ -214,8 +213,8 @@
                     <h3 class="text-xl font-serif font-bold text-pitch-black mb-3">2.2 Paid Program (Wealth Abundance Blue Print)</h3>
                     <p class="mb-3">If you choose to enrol in a paid workshop or program after your free consultation, the applicable fees will be communicated to you clearly before you enrol. The following applies to those fees:</p>
                     <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li><strong>Refund before commencement:</strong> If you request a refund <strong>before</strong> the relevant workshop or program stage begins, you are entitled to a full refund of the fees paid for that stage.</li>
-                        <li><strong>No refund after commencement:</strong> Once a workshop or session has begun or been delivered, the fee for that delivered portion is non-refundable, as time, materials, and personal guidance have already been allocated to you.</li>
+                        <li><strong>72 Hours Refund Policy:</strong> If you request a refund before the relevant workshop / program stage begins, during, or at the end of the program, you will be given a full refund of the fees paid for any claim made within <strong>72 hours of enrolment</strong>, no questions asked.</li>
+                        <li><strong>No refund after completion:</strong> Once a workshop or session has been delivered, the fee for that delivered portion is non-refundable, as time, materials, and personal proprietary guidance would have already been allocated/delivered.</li>
                     </ul>
                 </section>
 
@@ -261,13 +260,13 @@
                 <!-- 3.3 Past Performance -->
                 <section>
                     <h3 class="text-xl font-serif font-bold text-pitch-black mb-3">3.3 Past Performance</h3>
-                    <p>Any references to past performance, historical data, or case studies are provided for illustrative purposes only. <strong>Past performance does not guarantee future results.</strong> The value of investments can go down as well as up, and you may receive back less than you invested.</p>
+                    <p>Any references to past performance, historical data, or case studies are provided for illustrative purposes only. <strong>Past performance does not guarantee future results.</strong> The value of investments can go down as well as up, and there may be odd instances where returns may be less than you invested.</p>
                 </section>
 
                 <!-- 3.4 Not SEBI-Registered -->
                 <section>
                     <h3 class="text-xl font-serif font-bold text-pitch-black mb-3">3.4 Not SEBI-Registered Investment Advice</h3>
-                    <p>Joy With Wealth and Col Daljeet Rupaal are <strong>not registered with the Securities and Exchange Board of India (SEBI)</strong> as an Investment Adviser or Research Analyst. Nothing we provide should be construed as personalised investment advice regulated under SEBI guidelines. For specific investment decisions, you should consult a SEBI-registered investment adviser. Where we help you access financial products, we do so as a distributor (see Disclosure), not as a regulated adviser.</p>
+                    <p>Joy With Wealth and Col Daljeet Rupaal are <strong>not registered with the Securities and Exchange Board of India (SEBI)</strong> as an Investment Adviser or Research Analyst. Daljeet Singh Rupaal is an NISM-certified Mutual Fund Distributor registered with AMFI, an IRDA-certified Insurance Advisor, and a Personal Finance Professional. Whatever assistance we provide should not be construed as personalised investment advice regulated under SEBI guidelines. For specific investment decisions, you should consult a SEBI-registered investment advisor. Where we help you access financial products, we do so as a Mutual Fund Distributor (see Disclosure), and not as a regulated advisor.</p>
                 </section>
 
                 <!-- 3.5 Risk Factors -->
@@ -317,7 +316,7 @@
                 <!-- 4.3 Affiliate & Referral Relationships -->
                 <section>
                     <h3 class="text-xl font-serif font-bold text-pitch-black mb-3">4.3 Affiliate and Referral Relationships</h3>
-                    <p>In the course of our work, we may help you access financial and other products &mdash; including <strong>mutual funds, insurance products, and product-based opportunities (such as Kangen / Enagic)</strong>. We may act as a distributor or referral partner for these, and may receive commissions, distribution fees, or referral income as a result. These relationships may create a conflict of interest. We aim to be transparent about them and to introduce only options we genuinely believe can serve you; nonetheless, you should evaluate any product independently and on its own merits.</p>
+                    <p>In the course of our consultation and professional assistance, we may help you access financial and other products &mdash; including, but not limited to, <strong>mutual funds, insurance products, and financial opportunities based on the Direct Selling Companies list notified in the Extraordinary Gazette of India by the Ministry of Consumer Affairs, Govt of India (2025&ndash;26)</strong>. We may act as a distributor or referral partner for these, and may receive commissions, distribution fees, or referral income as a result. These relationships may create a conflict of interest. We aim to be transparent about them and to introduce only options we genuinely believe can serve you; nonetheless, you should evaluate any product independently and on its own merits.</p>
                 </section>
 
                 <!-- 4.4 Revenue Transparency -->
@@ -327,7 +326,7 @@
                     <ul class="list-disc list-inside space-y-2 ml-4">
                         <li><strong>Program fees:</strong> Fees for the paid workshops and coaching within the Wealth Abundance Blue Print.</li>
                         <li><strong>Distribution commissions:</strong> Commissions from facilitating mutual funds and insurance products.</li>
-                        <li><strong>Referral and affiliate income:</strong> Fees or commissions from product-based opportunities we may introduce you to (such as Kangen / Enagic).</li>
+                        <li><strong>Referral and affiliate income:</strong> Fees or commissions from product-based opportunities we may introduce you to.</li>
                     </ul>
                 </section>
 
@@ -368,7 +367,7 @@
                     <p class="mb-3">Joy With Wealth provides the following:</p>
                     <ul class="list-disc list-inside space-y-2 ml-4">
                         <li><strong>Free initial consultation:</strong> A one-on-one Discovery Call to understand your situation and goals, at no cost and with no obligation.</li>
-                        <li><strong>Wealth Abundance Blue Print:</strong> A paid, guided 4-step, 12-month financial-education and coaching program, including workshops on goal-setting, savings and budgeting, planning for contingencies, and building passive income.</li>
+                        <li><strong>Wealth Abundance Blue Print:</strong> A paid, guided 4-step financial-education and coaching program, including workshops on goal-setting, savings and budgeting, planning for contingencies, and building passive income.</li>
                         <li><strong>Product facilitation:</strong> As a distributor or referral partner, we may help you access mutual funds, insurance, and product-based opportunities, and may earn commissions or referral income (see Disclosure).</li>
                         <li><strong>Educational content:</strong> Blog posts, guides, and resources published on our website.</li>
                     </ul>
@@ -426,7 +425,7 @@
                 <!-- 5.9 Governing Law -->
                 <section>
                     <h3 class="text-xl font-serif font-bold text-pitch-black mb-3">5.9 Governing Law and Jurisdiction</h3>
-                    <p>These Terms of Service are governed by and construed in accordance with the laws of India. Any disputes arising from or related to these terms or our services shall be subject to the exclusive jurisdiction of the courts in <strong>[City, State]</strong>, India.</p>
+                    <p>These Terms of Service are governed by and construed in accordance with the laws of India. Any disputes arising from or related to these terms or our services shall be subject to the exclusive jurisdiction of the courts in <strong>Punjab</strong>, India.</p>
                 </section>
 
                 <!-- 5.10 Modifications -->
@@ -452,7 +451,7 @@
                 <div class="faq-item bg-pure-white rounded-xl border border-powder-blue/30 shadow-sm overflow-hidden">
                     <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-off-white/50 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold text-pitch-black">What is Joy With Wealth?</span>
-                        <svg class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-5">
                         <p class="text-charcoal-blue leading-relaxed">Joy With Wealth is a financial education and coaching service based in India, led by Col Daljeet Rupaal, Wealth Abundance Strategist. Through one-to-one guidance and the Wealth Abundance Blue Print program, we help individuals and families build the knowledge, habits, and plan to grow towards a financially abundant, fulfilling life.</p>
@@ -463,10 +462,10 @@
                 <div class="faq-item bg-pure-white rounded-xl border border-powder-blue/30 shadow-sm overflow-hidden">
                     <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-off-white/50 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold text-pitch-black">How does the program work?</span>
-                        <svg class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-5">
-                        <p class="text-charcoal-blue leading-relaxed">It starts with a free one-on-one Discovery Call to understand your situation and goals. If it's a good fit, you can join the Wealth Abundance Blue Print &mdash; a guided, 4-step, 12-month program: <strong>Book Your Discovery Call → Design the Strategy → Implement &amp; Grow → Passive Income Formula</strong>. Along the way you'll work through goal-setting, savings and budgeting, planning for life's surprises, and building a source of passive income.</p>
+                        <p class="text-charcoal-blue leading-relaxed">It starts with a free one-on-one Discovery Call to understand your financial situation, goals, and aspirations. If it's a good fit, you can join the Wealth Abundance Blue Print &mdash; a guided, 4-step program: <strong>Book Your Discovery Call → Design the Strategy → Implement &amp; Grow → Passive Income Formula</strong>. Along the way you'll work through goal-setting, savings and budgeting, planning for life's surprises, and building a source of passive income.</p>
                     </div>
                 </div>
 
@@ -474,7 +473,7 @@
                 <div class="faq-item bg-pure-white rounded-xl border border-powder-blue/30 shadow-sm overflow-hidden">
                     <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-off-white/50 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold text-pitch-black">Is the initial consultation really free?</span>
-                        <svg class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-5">
                         <p class="text-charcoal-blue leading-relaxed">Yes. Your first one-on-one consultation (the Discovery Call) is completely free and carries no obligation. If you later choose to join a paid program, any fees are explained to you clearly before you enrol.</p>
@@ -485,7 +484,7 @@
                 <div class="faq-item bg-pure-white rounded-xl border border-powder-blue/30 shadow-sm overflow-hidden">
                     <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-off-white/50 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold text-pitch-black">Do you provide investment advice?</span>
-                        <svg class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-5">
                         <p class="text-charcoal-blue leading-relaxed">We provide financial education and coaching, not regulated investment advice. We are not registered with SEBI as an Investment Adviser. We help you understand your finances, build skills and habits, and create a plan &mdash; but all decisions are yours. Where we help you access financial products, we do so as a distributor (see Disclosure). For specific, regulated investment advice, please consult a SEBI-registered Investment Adviser.</p>
@@ -496,10 +495,10 @@
                 <div class="faq-item bg-pure-white rounded-xl border border-powder-blue/30 shadow-sm overflow-hidden">
                     <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-off-white/50 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold text-pitch-black">Can I get a refund?</span>
-                        <svg class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-5">
-                        <p class="text-charcoal-blue leading-relaxed">The Discovery Call is free, so there's nothing to refund there. For a paid program, you can receive a full refund of a stage's fees if you request it before that workshop or stage begins. Once a session has been delivered, that portion is non-refundable. See our <a href="#refund-policy" class="text-dark-goldenrod hover:text-honey-bronze font-medium">Refund Policy</a> for full details.</p>
+                        <p class="text-charcoal-blue leading-relaxed">If you request a refund before the relevant workshop / program stage begins, during, or at the end of the program, you will be given a full refund of the fees paid for any claim made within <strong>72 hours of enrolment</strong>, no questions asked. Once a workshop or session has been delivered, the fee for that delivered portion is non-refundable, as time, materials, and personal proprietary guidance would have already been allocated/delivered. See our <a href="#refund-policy" class="text-dark-goldenrod hover:text-honey-bronze font-medium">Refund Policy</a> for full details.</p>
                     </div>
                 </div>
 
@@ -507,10 +506,10 @@
                 <div class="faq-item bg-pure-white rounded-xl border border-powder-blue/30 shadow-sm overflow-hidden">
                     <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-off-white/50 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold text-pitch-black">Is my payment secure?</span>
-                        <svg class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-5">
-                        <p class="text-charcoal-blue leading-relaxed">Yes. Payments for paid programs are processed through Razorpay, one of India's most trusted payment gateways and PCI-DSS Level 1 compliant. We never store your card details on our servers &mdash; your payment information is encrypted and handled entirely by Razorpay's secure infrastructure.</p>
+                        <p class="text-charcoal-blue leading-relaxed">Yes. Payments for paid programs are processed through Razorpay, one of India's most trusted payment gateways, approved by the Govt of India and PCI-DSS Level 1 compliant. We never store your card details on our servers &mdash; your payment information is encrypted and handled entirely by Razorpay's secure infrastructure.</p>
                     </div>
                 </div>
 
@@ -518,10 +517,10 @@
                 <div class="faq-item bg-pure-white rounded-xl border border-powder-blue/30 shadow-sm overflow-hidden">
                     <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-off-white/50 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold text-pitch-black">Do you earn commissions on products you recommend?</span>
-                        <svg class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-5">
-                        <p class="text-charcoal-blue leading-relaxed">Sometimes, yes &mdash; and we disclose it. We may help you access mutual funds, insurance, and product-based opportunities (such as Kangen / Enagic), and may earn commissions or referral income when you do. We aim to introduce only options we believe can genuinely serve you. Please see our <a href="#disclosure" class="text-dark-goldenrod hover:text-honey-bronze font-medium">Disclosure</a> and evaluate any product on its own merits.</p>
+                        <p class="text-charcoal-blue leading-relaxed">Sometimes, yes &mdash; and we disclose it. We may help you access mutual funds, insurance, and product-based opportunities, and may earn commissions or referral income when you do. We aim to introduce only options we believe can genuinely serve you. Please see our <a href="#disclosure" class="text-dark-goldenrod hover:text-honey-bronze font-medium">Disclosure</a> and evaluate any product on its own merits.</p>
                     </div>
                 </div>
 
@@ -529,7 +528,7 @@
                 <div class="faq-item bg-pure-white rounded-xl border border-powder-blue/30 shadow-sm overflow-hidden">
                     <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-off-white/50 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold text-pitch-black">How do I contact you?</span>
-                        <svg class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-dark-goldenrod flex-shrink-0 transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-5">
                         <p class="text-charcoal-blue leading-relaxed">You can reach us by email at <a href="mailto:contact@joywithwealth.com" class="text-dark-goldenrod hover:text-honey-bronze font-medium">contact@joywithwealth.com</a>, or use the <a href="/#contact" class="text-dark-goldenrod hover:text-honey-bronze font-medium">Contact section</a> on our homepage to book your free consultation. We typically respond within 24 hours on business days.</p>
@@ -544,8 +543,20 @@
     <!-- Footer -->
     <footer class="bg-pitch-black py-5 border-t border-charcoal-blue">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <a href="/policies/" class="text-sm text-powder-blue hover:text-light-gold transition-colors">Policies, Disclaimers &amp; FAQ</a>
+                <div class="flex items-center gap-5">
+                    <!-- TODO: replace href with the Facebook page URL for "Daljeet Singh Rupaal" -->
+                    <a href="#" aria-label="Facebook" class="text-powder-blue hover:text-light-gold transition-colors">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/daljeet-rupaal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-powder-blue hover:text-light-gold transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.instagram.com/daljeetrupaal" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-powder-blue hover:text-light-gold transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                </div>
                 <p class="text-charcoal-blue text-sm">&copy; 2026 Joy With Wealth. All rights reserved.</p>
             </div>
         </div>
@@ -586,6 +597,9 @@
     })();
     </script>
 
+    <!-- Icons (self-hosted Lucide) -->
+    <script src="/assets/js/lucide.min.js"></script>
+    <script src="/assets/js/brand-icons.js"></script>
     <!-- Common JS (mobile menu, cookie consent, analytics) -->
     <script src="/assets/js/common.js"></script>
 </body>
