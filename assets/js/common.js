@@ -46,11 +46,18 @@
   }
 
   function setConsent(analytics, marketing) {
+    var prev = getConsent();
     var consent = { analytics: analytics, marketing: marketing, timestamp: Date.now() };
     localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+    hideBanner();
+    // If a previously granted category was just withdrawn, reload so any
+    // already-loaded analytics/marketing scripts are not retained this session.
+    if (prev && ((prev.analytics && !analytics) || (prev.marketing && !marketing))) {
+      window.location.reload();
+      return;
+    }
     if (analytics) loadGoogleAnalytics();
     if (marketing) loadFacebookPixel();
-    hideBanner();
   }
 
   function hasAnalyticsConsent() {
@@ -68,20 +75,31 @@
     if (banner) banner.remove();
   }
 
-  function showConsentBanner() {
-    if (getConsent()) return; // Already consented
+  function showConsentBanner(force) {
+    if (!force && getConsent()) return; // Already chosen
+
+    hideBanner(); // avoid duplicates when re-opened from the footer
+
+    var prev = getConsent() || { analytics: false, marketing: false };
 
     var banner = document.createElement('div');
     banner.id = 'cookie-consent-banner';
     banner.className = 'fixed bottom-0 left-0 right-0 z-[100] bg-tar-blue text-pure-white p-4 shadow-2xl border-t border-air-force-blue/30';
     banner.innerHTML =
-      '<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">' +
-        '<div class="text-sm text-powder-blue">' +
-          'We use cookies for analytics and marketing. By clicking "Accept All", you consent to our use of cookies. ' +
-          '<a href="/policies/#privacy-policy" class="underline text-light-gold hover:text-honey-bronze">Learn more</a>' +
+      '<div class="max-w-7xl mx-auto flex flex-col gap-4">' +
+        '<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">' +
+          '<div class="text-sm text-powder-blue">' +
+            'We use cookies to improve your experience. Choose which optional cookies to allow; essential cookies are always on. ' +
+            '<a href="/policies/#privacy-policy" class="underline text-light-gold hover:text-honey-bronze">Learn more</a>' +
+          '</div>' +
+          '<div class="flex flex-wrap items-center gap-4 text-sm text-off-white">' +
+            '<label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="consent-analytics" class="accent-dark-goldenrod"' + (prev.analytics ? ' checked' : '') + '> Analytics</label>' +
+            '<label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="consent-marketing" class="accent-dark-goldenrod"' + (prev.marketing ? ' checked' : '') + '> Marketing</label>' +
+          '</div>' +
         '</div>' +
-        '<div class="flex gap-3 flex-shrink-0">' +
-          '<button id="consent-reject" class="px-4 py-2 text-sm border border-powder-blue/50 rounded-full hover:bg-charcoal-blue transition-colors">Essential Only</button>' +
+        '<div class="flex flex-wrap gap-3 justify-end">' +
+          '<button id="consent-reject" class="px-4 py-2 text-sm border border-powder-blue/50 rounded-full hover:bg-charcoal-blue transition-colors">Reject All</button>' +
+          '<button id="consent-save" class="px-4 py-2 text-sm border border-powder-blue/50 rounded-full hover:bg-charcoal-blue transition-colors">Save Preferences</button>' +
           '<button id="consent-accept" class="px-4 py-2 text-sm bg-dark-goldenrod text-pure-white rounded-full hover:bg-honey-bronze transition-colors font-medium">Accept All</button>' +
         '</div>' +
       '</div>';
@@ -94,7 +112,16 @@
     document.getElementById('consent-reject').addEventListener('click', function () {
       setConsent(false, false);
     });
+    document.getElementById('consent-save').addEventListener('click', function () {
+      setConsent(
+        document.getElementById('consent-analytics').checked,
+        document.getElementById('consent-marketing').checked
+      );
+    });
   }
+
+  // Let visitors re-open the banner from the footer to change or withdraw consent.
+  window.jwwManageConsent = function () { showConsentBanner(true); };
 
   // --- Analytics Loaders ---
   // Replace these placeholder IDs with real ones before launch
